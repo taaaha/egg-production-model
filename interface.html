@@ -1,0 +1,56 @@
+ <!-- Progress Bar Container -->
+<div id="progress-container" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; max-width: 600px; background-color: #f5f5f5; border-radius: 10px; padding: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); text-align: center;">
+   <div id="progress-bar" style="width: 0%; height: 10px; background-color: #2f870d; border-radius: 5px; margin-bottom: 10px;"></div>
+   <div id="progress-text" style="font-size: 1.2em; color: #333;">Please wait...</div>
+ </div>
+ 
+ <!-- Prediction Result Popup -->
+ <div id="result-popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; max-width: 600px; background-color: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); text-align: center;">
+   <h2 style="font-size: 1.8em; color: #2f870d;">Prediction Result</h2>
+   <div id="result-text" style="font-size: 1.5em; margin-bottom: 20px;"></div>
+   <button id="close-popup" style="padding: 10px 20px; font-size: 1.2em; color: #fff; background-color: #2f870d; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">
+     Close
+   </button>
+ </div>
+ 
+      <form style="background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); max-width: 600px; width: 100%; box-sizing: border-box; height: auto; margin-left: 100px;" id="prediction-form">
+         <h2 style="margin-bottom: 20px; font-size: 1.8em; color: #2f870d; text-align: center;">Egg Production Prediction</h2>
+         <div style="display: flex; flex-direction: column; gap: 15px;">
+           <label style="display: flex; justify-content: space-between; align-items: center; font-size: 1.2em;">
+             <span>Amount of Chicken:</span>
+             <input type="number" id="Amount_of_chicken" name="Amount_of_chicken" style="width: 60%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+           </label>
+           <label style="display: flex; justify-content: space-between; align-items: center; font-size: 1.2em;">
+             <span>Amount of Feeding:</span>
+             <input type="number" id="Amount_of_Feeding" name="Amount_of_Feeding" style="width: 60%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+           </label>
+           <label style="display: flex; justify-content: space-between; align-items: center; font-size: 1.2em;">
+             <span>Ammonia:</span>
+             <input type="number" id="Ammonia" name="Ammonia" style="width: 60%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+           </label>
+           <label style="display: flex; justify-content: space-between; align-items: center; font-size: 1.2em;">
+             <span>Temperature:</span>
+             <input type="number" id="Temperature" name="Temperature" style="width: 60%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+           </label>
+           <label style="display: flex; justify-content: space-between; align-items: center; font-size: 1.2em;">
+             <span>Humidity:</span>
+             <input type="number" id="Humidity" name="Humidity" style="width: 60%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+           </label>
+           <label style="display: flex; justify-content: space-between; align-items: center; font-size: 1.2em;">
+             <span>Light Intensity:</span>
+             <input type="number" id="Light_Intensity" name="Light_Intensity" style="width: 60%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+           </label>
+           <label style="display: flex; justify-content: space-between; align-items: center; font-size: 1.2em;">
+             <span>Noise:</span>
+             <input type="number" id="Noise" name="Noise" style="width: 60%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+           </label>
+         </div>
+         <button type="submit" style="margin-top: 20px; width: 100%; padding: 15px; font-size: 1.2em; color: #fff; background-color: #2f870d; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">
+           Predict
+         </button>
+         <div id="loading-spinner" style="display: none; margin-top: 20px; text-align: center;">
+           <span>Loading...</span>
+         </div>
+         <div id="prediction-result" style="margin-top: 20px; font-size: 1.2em; color: #333;"></div>
+       </form>
+       
